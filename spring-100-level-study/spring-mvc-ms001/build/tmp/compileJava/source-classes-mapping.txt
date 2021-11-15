@@ -1,4 +1,0 @@
-com/spring/mvc/controller/HomeController.java
- com.spring.mvc.controller.HomeController
-com/spring/mvc/controller/BoardController.java
- com.spring.mvc.controller.BoardController
