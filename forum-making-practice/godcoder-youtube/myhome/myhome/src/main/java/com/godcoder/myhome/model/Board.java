@@ -18,7 +18,7 @@ public class Board {
     private Long id;
 
     @NotNull
-    @Size(min=2, max=30)
+    @Size(min=2, max=30, message = "Title must be between 2 and 30 letters")
     private String title;
     private String content;
 }
