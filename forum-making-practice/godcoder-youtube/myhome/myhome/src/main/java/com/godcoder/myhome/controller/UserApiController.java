@@ -5,7 +5,6 @@ import com.godcoder.myhome.model.User;
 import com.godcoder.myhome.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.thymeleaf.util.StringUtils;
 
 import java.util.List;
 
@@ -19,7 +18,12 @@ class UserApiController {
     // tag::get-aggregate-root[]
     @GetMapping("/users")
     List<User> all() {
-        return repository.findAll();
+        List<User> users = repository.findAll();
+        Log.debug("getBoards().size() 호출전");
+        Log.debug("getBoards().size() : {}", users.get(0).getBoards().size());
+        Log.debug("getBoards().size() 호출후");
+        users.get(0).getBoards().size();
+        return users;
     }
     // end::get-aggregate-root[]
 
